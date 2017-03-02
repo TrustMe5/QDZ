@@ -1,0 +1,19 @@
+2016-10-15 07:59:48 root start.py(<module>[line:82]) INFO - start...
+2016-10-15 07:59:48 root start.py(<module>[line:86]) INFO - todaydatestamp: 1476460800.0
+2016-10-15 07:59:49 root start.py(<module>[line:95]) INFO - zhengliangdb中的newzengliang数目：0
+2016-10-15 07:59:49 root start.py(<module>[line:100]) INFO - dajieresumedb中的youlian数目：0
+2016-10-15 07:59:49 root start.py(<module>[line:105]) INFO - dajieresumedb中的wulian数目：0
+2016-10-15 07:59:49 root start.py(<module>[line:110]) INFO - dajieresumedb中的middle数目：0
+2016-10-15 07:59:49 root start.py(<module>[line:115]) INFO - zhengliangdb中的zengliangwulian数目：0
+2016-10-15 07:59:49 root start.py(<module>[line:120]) INFO - static_data中的liepin160526_youlian数目：0
+2016-10-15 07:59:49 root start.py(<module>[line:125]) INFO - static_data中的liepin160526_wulian数目：0
+2016-10-15 07:59:49 root start.py(<module>[line:130]) INFO - static_data中的youlian数目：0
+2016-10-15 07:59:49 root start.py(<module>[line:135]) INFO - static_data中的的wulian数目：0
+2016-10-15 07:59:49 root start.py(<module>[line:140]) INFO - splice_data中的youlian数目：0
+2016-10-15 07:59:49 root start.py(<module>[line:145]) INFO - emaildb中的temp数目：357
+2016-10-15 07:59:49 root start.py(<module>[line:150]) INFO - 今日mongo中总数为：357
+2016-10-15 07:59:49 root start.py(<module>[line:153]) INFO - 查询6.63上mergedata01数据库中original_resume_data_v2_20161015的时间为：2016-10-15 07:59:49
+2016-10-15 07:59:49 root start.py(<module>[line:155]) INFO - sql: select count(*) from original_resume_data_v2_20161015
+2016-10-15 07:59:49 root start.py(<module>[line:157]) INFO - original_resume_data_v2_20161015表中的数量为：357
+2016-10-15 07:59:49 root start.py(<module>[line:161]) INFO - mongo今日数据量与db的数量之差为：0
+2016-10-15 07:59:49 root start.py(<module>[line:238]) INFO - end...

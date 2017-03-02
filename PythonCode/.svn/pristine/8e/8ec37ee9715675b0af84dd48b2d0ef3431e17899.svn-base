@@ -1,0 +1,43 @@
+#coding=utf-8
+import MySQLdb
+import psycopg2
+import sys,datetime
+import sendmail
+reload(sys)
+sys.setdefaultencoding('utf8')
+
+def getTime():
+    now_time = datetime.datetime.now()
+    onehourbefore_time = now_time + datetime.timedelta(hours=-1)
+    return onehourbefore_time.strftime('%Y-%m-%d %H:%M:%S'),now_time.strftime('%Y-%m-%d %H:%M:%S')
+
+
+def getDBdataFrom69(sql, host, user, passwd, db):
+    conn = MySQLdb.connect(host=host, user=user, passwd=passwd, db=db, charset='utf8')
+    cur = conn.cursor()
+    cur.execute('SET NAMES UTF8')
+    conn.commit()
+    oper = cur.execute(sql)
+    data = cur.fetchmany(oper)
+    cur.close()
+    return data
+
+
+def getDBdataFromPostgree(sql, host, user, passwd, db):
+    conn = psycopg2.connect(database=db, user=user, password=passwd, host=host, port="5432")
+    cur = conn.cursor()
+    oper = cur.execute(sql)
+    data = cur.fetchmany(oper)
+    conn.close()
+    return data
+
+
+if __name__ == '__main__':
+    time1, time2 = getTime()
+    sql1 = "select count(*) from djuniqueperson where update_date > '%s' and update_date < '%s'" % (time1, time2)
+    sql2 = "select count(*) from fjl.resume where update_time > '%s' and update_time < '%s' and is_delete = 'f'" % (time1, time2)
+    datanum1 = getDBdataFrom69(sql1, "192.168.6.69", "test", "test", "resume_update")
+    datanum2 = getDBdataFromPostgree(sql2, "192.168.6.120", "postgres", "5432@pk_id", "fjl_resume")
+    sendmail.send_mail(time1,time2,datanum1[0][0],datanum2[0][0])
+    print '自然人表中从%s到%s的数量：%s'%(time1,time2,datanum1[0][0])
+    print '纷简历表中从%s到%s的数量：%s'%(time1,time2,datanum2[0][0])

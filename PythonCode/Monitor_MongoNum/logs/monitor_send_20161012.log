@@ -1,0 +1,88 @@
+2016-10-12 17:12:39 root start.py(<module>[line:82]) INFO - start...
+2016-10-12 17:12:39 root start.py(<module>[line:86]) INFO - todaydatestamp: 1476201600.0
+2016-10-12 17:12:40 root start.py(<module>[line:95]) INFO - zhengliangdb中的newzengliang数目：110176
+2016-10-12 17:12:40 root start.py(<module>[line:100]) INFO - dajieresumedb中的youlian数目：0
+2016-10-12 17:12:40 root start.py(<module>[line:105]) INFO - dajieresumedb中的wulian数目：0
+2016-10-12 17:12:40 root start.py(<module>[line:110]) INFO - dajieresumedb中的middle数目：0
+2016-10-12 17:12:40 root start.py(<module>[line:115]) INFO - zhengliangdb中的zengliangwulian数目：290
+2016-10-12 17:12:40 root start.py(<module>[line:120]) INFO - static_data中的liepin160526_youlian数目：0
+2016-10-12 17:12:40 root start.py(<module>[line:125]) INFO - static_data中的liepin160526_wulian数目：0
+2016-10-12 17:12:40 root start.py(<module>[line:130]) INFO - static_data中的youlian数目：0
+2016-10-12 17:12:40 root start.py(<module>[line:135]) INFO - static_data中的的wulian数目：0
+2016-10-12 17:12:40 root start.py(<module>[line:140]) INFO - splice_data中的youlian数目：116521
+2016-10-12 17:12:40 root start.py(<module>[line:145]) INFO - emaildb中的temp数目：7304
+2016-10-12 17:12:40 root start.py(<module>[line:151]) INFO - 今日mongo中总数为：234291
+2016-10-12 17:12:40 root start.py(<module>[line:154]) INFO - 查询6.63上mergedata01数据库中original_resume_data_v2_20161012的时间为：2016-10-12 17:12:40
+2016-10-12 17:12:40 root start.py(<module>[line:156]) INFO - sql: select count(*) from original_resume_data_v2_20161012
+2016-10-12 17:12:41 root start.py(<module>[line:158]) INFO - original_resume_data_v2_20161012表中的数量为：234029
+2016-10-12 17:12:41 root start.py(<module>[line:162]) INFO - mongo今日数据量与db的数量之差为：262
+2016-10-12 17:12:41 root start.py(<module>[line:164]) INFO - 将mongo今日数据量与db的数量之差存入数据库，时间：2016-10-12 17:12:41
+2016-10-12 17:12:41 root start.py(<module>[line:166]) INFO - sql2: insert into mongodb_num(time, value) values ('2016-10-12 17:12:41', '262')
+2016-10-12 17:12:41 root start.py(<module>[line:169]) INFO - 开始查询今日自然人表数量，时间：2016-10-12 17:12:41
+2016-10-12 17:12:41 root start.py(<module>[line:171]) INFO - sql3: select count(*) from djuniqueperson where update_date >= '2016-10-12'
+2016-10-12 17:12:41 root start.py(<module>[line:173]) INFO - 今日更新自然人表数量为：117287
+2016-10-12 17:12:41 root start.py(<module>[line:175]) INFO - 开始查询今日djpendingdata表数量，时间：2016-10-12 17:12:41
+2016-10-12 17:12:41 root start.py(<module>[line:177]) INFO - sql4: select count(*) from djpendingdata where insert_date >= '2016-10-12'
+2016-10-12 17:12:42 root start.py(<module>[line:179]) INFO - 今日djpendingdata表数量，：118676
+2016-10-12 17:12:42 root start.py(<module>[line:181]) INFO - 今日自然人表与djpendingdata的差值为：-1389
+2016-10-12 17:12:42 root start.py(<module>[line:183]) INFO - 开始查询今日djuniqueperson表近30天的数据数量，时间：2016-10-12 17:12:42
+2016-10-12 17:12:42 root start.py(<module>[line:185]) INFO - sql8: select count(*) from djuniqueperson where update_date >= '2016-10-12' and version_date >= '2016.09.12' and version_date <= '2016.10.12'
+2016-10-12 17:12:43 root start.py(<module>[line:187]) INFO - 今日djuniqueperson表近30天的数据数量为：100614
+2016-10-12 17:12:43 root start.py(<module>[line:189]) INFO - 开始查询今日ycpendingdata表的数据数量，时间：2016-10-12 17:12:43
+2016-10-12 17:12:43 root start.py(<module>[line:191]) INFO - sql5: select count(*) from ycpendingdata where insert_date >= '2016-10-12'
+2016-10-12 17:12:43 root start.py(<module>[line:193]) INFO - 今日ycpendingdata表的数据数量为：100589
+2016-10-12 17:12:43 root start.py(<module>[line:195]) INFO - 今日djuniqueperson与ycpendingdata的数据数量之差：25
+2016-10-12 17:12:43 root start.py(<module>[line:197]) INFO - 开始将djuniqueperson与djpendingdata的差值存入数据库，时间为：2016-10-12 17:12:43
+2016-10-12 17:12:43 root start.py(<module>[line:199]) INFO - sql6: insert into uniper_djpend_num(time, value) values ('2016-10-12 17:12:41', '-1389')
+2016-10-12 17:12:43 root start.py(<module>[line:202]) INFO - 开始将djuniqueperson与ycpendingdata的差值存入数据库，时间为：2016-10-12 17:12:43
+2016-10-12 17:12:43 root start.py(<module>[line:204]) INFO - sql7: insert into uniper_ycpend_num(time, value) values ('2016-10-12 17:12:41', '25')
+2016-10-12 17:12:43 root start.py(<module>[line:209]) INFO - sql9: select count(*) from djuniqueperson where update_date >= '2016-10-12'
+2016-10-12 17:12:43 root start.py(<module>[line:211]) INFO - sql10: select count(*) from fjl.resume where update_time >= '2016-10-12'
+2016-10-12 17:12:43 root start.py(<module>[line:212]) INFO - 开始查询120纷简历今日更新简历数量,时间为2016-10-12 17:12:43
+2016-10-12 17:12:45 root start.py(<module>[line:214]) INFO - 120纷简历今日更新简历数量为：193684
+2016-10-12 17:13:44 root start.py(<module>[line:82]) INFO - start...
+2016-10-12 17:13:44 root start.py(<module>[line:86]) INFO - todaydatestamp: 1476201600.0
+2016-10-12 17:13:45 root start.py(<module>[line:95]) INFO - zhengliangdb中的newzengliang数目：110176
+2016-10-12 17:13:45 root start.py(<module>[line:100]) INFO - dajieresumedb中的youlian数目：0
+2016-10-12 17:13:45 root start.py(<module>[line:105]) INFO - dajieresumedb中的wulian数目：0
+2016-10-12 17:13:45 root start.py(<module>[line:110]) INFO - dajieresumedb中的middle数目：0
+2016-10-12 17:13:45 root start.py(<module>[line:115]) INFO - zhengliangdb中的zengliangwulian数目：290
+2016-10-12 17:13:45 root start.py(<module>[line:120]) INFO - static_data中的liepin160526_youlian数目：0
+2016-10-12 17:13:45 root start.py(<module>[line:125]) INFO - static_data中的liepin160526_wulian数目：0
+2016-10-12 17:13:45 root start.py(<module>[line:130]) INFO - static_data中的youlian数目：0
+2016-10-12 17:13:45 root start.py(<module>[line:135]) INFO - static_data中的的wulian数目：0
+2016-10-12 17:13:45 root start.py(<module>[line:140]) INFO - splice_data中的youlian数目：116521
+2016-10-12 17:13:45 root start.py(<module>[line:145]) INFO - emaildb中的temp数目：7304
+2016-10-12 17:13:45 root start.py(<module>[line:151]) INFO - 今日mongo中总数为：234291
+2016-10-12 17:13:45 root start.py(<module>[line:154]) INFO - 查询6.63上mergedata01数据库中original_resume_data_v2_20161012的时间为：2016-10-12 17:13:45
+2016-10-12 17:13:45 root start.py(<module>[line:156]) INFO - sql: select count(*) from original_resume_data_v2_20161012
+2016-10-12 17:13:45 root start.py(<module>[line:158]) INFO - original_resume_data_v2_20161012表中的数量为：234029
+2016-10-12 17:13:45 root start.py(<module>[line:162]) INFO - mongo今日数据量与db的数量之差为：262
+2016-10-12 17:13:45 root start.py(<module>[line:164]) INFO - 将mongo今日数据量与db的数量之差存入数据库，时间：2016-10-12 17:13:45
+2016-10-12 17:13:45 root start.py(<module>[line:166]) INFO - sql2: insert into mongodb_num(time, value) values ('2016-10-12 17:13:45', '262')
+2016-10-12 17:13:49 root start.py(<module>[line:169]) INFO - 开始查询今日自然人表数量，时间：2016-10-12 17:13:49
+2016-10-12 17:13:49 root start.py(<module>[line:171]) INFO - sql3: select count(*) from djuniqueperson where update_date >= '2016-10-12'
+2016-10-12 17:13:49 root start.py(<module>[line:173]) INFO - 今日更新自然人表数量为：117740
+2016-10-12 17:13:49 root start.py(<module>[line:175]) INFO - 开始查询今日djpendingdata表数量，时间：2016-10-12 17:13:49
+2016-10-12 17:13:49 root start.py(<module>[line:177]) INFO - sql4: select count(*) from djpendingdata where insert_date >= '2016-10-12'
+2016-10-12 17:13:49 root start.py(<module>[line:179]) INFO - 今日djpendingdata表数量，：118676
+2016-10-12 17:13:49 root start.py(<module>[line:181]) INFO - 今日自然人表与djpendingdata的差值为：-936
+2016-10-12 17:13:49 root start.py(<module>[line:183]) INFO - 开始查询今日djuniqueperson表近30天的数据数量，时间：2016-10-12 17:13:49
+2016-10-12 17:13:49 root start.py(<module>[line:185]) INFO - sql8: select count(*) from djuniqueperson where update_date >= '2016-10-12' and version_date >= '2016.09.12' and version_date <= '2016.10.12'
+2016-10-12 17:13:50 root start.py(<module>[line:187]) INFO - 今日djuniqueperson表近30天的数据数量为：100627
+2016-10-12 17:13:50 root start.py(<module>[line:189]) INFO - 开始查询今日ycpendingdata表的数据数量，时间：2016-10-12 17:13:50
+2016-10-12 17:13:50 root start.py(<module>[line:191]) INFO - sql5: select count(*) from ycpendingdata where insert_date >= '2016-10-12'
+2016-10-12 17:13:51 root start.py(<module>[line:193]) INFO - 今日ycpendingdata表的数据数量为：100634
+2016-10-12 17:13:51 root start.py(<module>[line:195]) INFO - 今日djuniqueperson与ycpendingdata的数据数量之差：-7
+2016-10-12 17:13:51 root start.py(<module>[line:197]) INFO - 开始将djuniqueperson与djpendingdata的差值存入数据库，时间为：2016-10-12 17:13:51
+2016-10-12 17:13:51 root start.py(<module>[line:199]) INFO - sql6: insert into uniper_djpend_num(time, value) values ('2016-10-12 17:13:45', '-936')
+2016-10-12 17:13:51 root start.py(<module>[line:202]) INFO - 开始将djuniqueperson与ycpendingdata的差值存入数据库，时间为：2016-10-12 17:13:51
+2016-10-12 17:13:51 root start.py(<module>[line:204]) INFO - sql7: insert into uniper_ycpend_num(time, value) values ('2016-10-12 17:13:45', '-7')
+2016-10-12 17:13:51 root start.py(<module>[line:209]) INFO - sql9: select count(*) from djuniqueperson where update_date >= '2016-10-12'
+2016-10-12 17:13:51 root start.py(<module>[line:211]) INFO - sql10: select count(*) from fjl.resume where update_time >= '2016-10-12'
+2016-10-12 17:13:51 root start.py(<module>[line:212]) INFO - 开始查询120纷简历今日更新简历数量,时间为2016-10-12 17:13:51
+2016-10-12 17:13:52 root start.py(<module>[line:214]) INFO - 120纷简历今日更新简历数量为：193684
+2016-10-12 17:13:52 root start.py(<module>[line:217]) INFO - 自然人表今日更新数据量与120纷简历今日更新简历数量的差值为：-75944
+2016-10-12 17:13:52 root start.py(<module>[line:220]) INFO - sql11:insert into uniper_120fjl_num (time, value) values ('2016-10-12 17:13:45', '-75944')
+2016-10-12 17:13:52 root start.py(<module>[line:221]) INFO - 将差值存入数据库.
+2016-10-12 17:13:52 root start.py(<module>[line:224]) INFO - end...
